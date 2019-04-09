@@ -15,7 +15,7 @@ D'après nos recherches, il y a deux façons de trouver une clé utilisée pour 
 L'analyse de fréquence fonctionne en testant toutes les possibilités pour chaque caractère de la clé et en comparant la fréquence de la lettre à ce qui est attendu en fonction de la langue cible.
 Par exemple, en français, la fréquence de la lettre'e' est la plus élevée. C'est pourquoi pour trouver la bonne lettre, nous recherchons la lettre qui donne la plus haute fréquence de'e' dans le message décrypté.
 
-# L'algorithme est le suivant :
+L'algorithme est le suivant :
 
   - Message séparé pour déchiffrer en bloc la longueur de la clé
   - Faire autant de tableaux que la longueur de la clé et les remplir avec le caractère correspondant à partir de nos blocs
@@ -24,6 +24,7 @@ Par exemple, en français, la fréquence de la lettre'e' est la plus élevée. C
   - Pour chaque table, décrypter avec toutes les possibilités (26 caractères) et trouver celle qui a la fréquence la plus élevée de'e'.
 
 Avec ça, on peut trouver la clé.
+
 Nombre d'essais : 26 + 26 + 26 + 26 + 26 + 26 + 26 = 156
 
 
@@ -41,6 +42,7 @@ La méthode consiste à convertir le caractère à chiffrer en int, de même pou
 # Brute-Force :
 
 On essaie toutes les clés jusqu'à ce qu'on trouve la bonne. Par exemple : AAAAAAAA, puis AAAAAB, ....
+
 Nombre d'essais : 26 * 26 * 26 * 26 * 26 * 26 * 26 * 26 = 308 915 776
 
 
