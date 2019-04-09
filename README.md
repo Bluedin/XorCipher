@@ -4,13 +4,14 @@ Nous avons 11 fichiers qui ont été cryptés. Au cours de notre enquête, nous 
 
 Pour trouver cette clé, nous avons écrit un programme en Python.
 
-D'après nos recherches, il y a deux façons de trouver une clé utilisée pour crypter avec XOR : 
+D'après nos recherches, il y a deux façons de trouver une clé utilisée pour crypter avec XOR :
+
   - Brute Force : Tester toutes les possibilités jusqu'à ce que nous déchiffrions le message
   - Avec analyse de fréquence
 
 
 
-# Analyse de fréquence :
+## Analyse de fréquence :
 
 L'analyse de fréquence fonctionne en testant toutes les possibilités pour chaque caractère de la clé et en comparant la fréquence de la lettre à ce qui est attendu en fonction de la langue cible.
 Par exemple, en français, la fréquence de la lettre'e' est la plus élevée. C'est pourquoi pour trouver la bonne lettre, nous recherchons la lettre qui donne la plus haute fréquence de'e' dans le message décrypté.
@@ -28,7 +29,7 @@ Avec ça, on peut trouver la clé.
 Nombre d'essais : 26 + 26 + 26 + 26 + 26 + 26 + 26 = 156
 
 
-# A propos de XOR Cipher :
+## A propos de XOR Cipher :
 
 XOR Cipher est un code symétrique où nous avons une clé composée de caractères. Ces caractères cryptent le message lettre par lettre avec une opération XOR.
 
@@ -39,7 +40,7 @@ La méthode consiste à convertir le caractère à chiffrer en int, de même pou
 
 
 
-# Brute-Force :
+## Brute-Force :
 
 On essaie toutes les clés jusqu'à ce qu'on trouve la bonne. Par exemple : AAAAAAAA, puis AAAAAB, ....
 
@@ -50,6 +51,7 @@ Dans la méthode Brute-Force, nous testons chaque combinaison qui nécessite de 
 
 
 
-# Dictionnaire :
+## Dictionnaire :
+
 Un dictionnaire est une base de données ou un fichier contenant une liste de mots d'une langue.
 
