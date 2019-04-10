@@ -41,14 +41,16 @@ class KeyFinder:
 
 
 #file1 = "PB"
-files = ["PA", "PB", "PC", "PD", "PE", "PF", "PG", "PH", "PI", "PJ", "PK"]
 
-for i in range(len(files)):
 
-    message = XORCipher.getTxtFrmFile("C:\\Users\\pblue\\Downloads\\Groupe 1 (3)\\{}.txt".format(files[i]))
+# files = ["PA", "PB", "PC", "PD", "PE", "PF", "PG", "PH", "PI", "PJ", "PK"]
 
-    key = KeyFinder.frqcFinder(message, 6)
-    print("{}: {}".format(files[i], key))
+# for i in range(len(files)):
+
+#     message = XORCipher.getTxtFrmFile("C:\\Users\\pblue\\Downloads\\Groupe 1 (3)\\{}.txt".format(files[i]))
+
+#     key = KeyFinder.frqcFinder(message, 6)
+#     print("{}: {}".format(files[i], key))
 
 #decrypted = XORCipher.xorCiphering(message, key)
 

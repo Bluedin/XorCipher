@@ -1,10 +1,11 @@
 import unittest
+import codecs
 from XORCipher import XORCipher 
 
 class XORCipherTest(unittest.TestCase):
 
     def setUp(self):
-        fileWritten = codecs.open("testWrite.txt", mode="w", encoding="osi8859_1" , errors='ignore')
+        fileWritten = codecs.open("testWrite.txt", mode="w", encoding="iso8859_1" , errors='ignore')
         fileWritten.write('testAlreadyWritten')
         fileWritten.close()
 
@@ -12,20 +13,27 @@ class XORCipherTest(unittest.TestCase):
         msg = 'a'
         key = 'a'
         expected = '\x00'
+        false = '\x01'
         foo = XORCipher.xorCiphering(msg, key)
-        self.assertEqual(foo, expected)
+        self.assertEqual(expected, foo)
+        self.assertNotEqual(false, foo)
     
     def testGetTxtFrmFile(self):
         expected = 'test'
         location = 'test.txt'
         msg = XORCipher.getTxtFrmFile(location)
         self.assertEqual(expected, msg)
+        self.assertNotEqual("", msg)
 
     def testPrintTxtToFile(self):
         expected = 'testwrite'
+        false = 'testAlreadyWritten'
         location = 'testWrite.txt'
         msg = XORCipher.printTxtToFile(location, expected)
-        filewritten = codecs.open(location, encoding='osi8859_1', errrors='ignore')
-        self.assertEqual(expected, filewritten.read())
+        filewritten = codecs.open(location, encoding='iso8859_1', errors='ignore')
+        msgFnd = filewritten.read()
+        filewritten.close()
+        self.assertEqual(expected, msgFnd)
+        self.assertNotEqual(false, msgFnd)
 
     
