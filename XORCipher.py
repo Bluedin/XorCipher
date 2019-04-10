@@ -12,7 +12,7 @@ class XORCipher:
     def __init__(self, file, key):
         self.file = file
         self.key = key
-        Cypherer.instances += 1
+        XORCipher.instances += 1
 
 
     def xorCiphering(msg, key):
