@@ -1,7 +1,13 @@
 import string
 from XORCipher import XORCipher
+from DecryptChecker import DecryptChecker
 
 class KeyFinder:
+    
+    key = 0
+
+    def __init__(self):
+        self.DC = DecryptChecker()
 
     def frqcFinder(msg):
         key = ""
@@ -35,12 +41,37 @@ class KeyFinder:
 
         return key
 
+    def bruteFrcFinder(self, msg, keylen):
+        testKey = []
+        for i in range(0, keylen):
+            testKey.append('a')
+        keyFound = self.fillLetters(msg, testKey, keylen-1)
+        return keyFound
+
+    def fillLetters(self, msg, key, indice):
+        for letter in string.ascii_lowercase:
+            key[indice] = letter
+            keyTemp = ''.join(key)
+            decryptMsg = XORCipher.xorCiphering(msg, keyTemp)
+            if (self.DC.msgCheck(decryptMsg)):
+                self.key = keyTemp
+                return keyTemp
+            a = indice - 1
+            if indice != 0:
+                result = self.fillLetters(msg, key, a)
+                if isinstance(result, str):
+                    return result
+            for k in range(0, indice + 1):
+                if indice+1 < len(key):
+                    key[k] = key[indice + 1]
+        return key
+
     def hammingDistance(bloc1, bloc2):
         hammingDistance = 0
         return hammingDistance
 
 
-#file1 = "PB"
+
 
 
 # files = ["PA", "PB", "PC", "PD", "PE", "PF", "PG", "PH", "PI", "PJ", "PK"]

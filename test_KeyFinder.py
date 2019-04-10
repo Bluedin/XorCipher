@@ -4,6 +4,7 @@ from KeyFinder import KeyFinder
 class KeyFinderTest(unittest.TestCase):
 
     def setUp(self):
+        self.KF = KeyFinder()
         self.msg = "Je représente une entreprise qui vient de passer n°5 mondial des sites de e-commerce. Notre équipe informatique est composée de : 75 ingénieurs développement, qui développent et réalisent la MCO de nos services vitrines et backend, 75 ingénieurs système & réseau, qui conçoivent et réalisent la MCO de nos infrastructures, 75 personnes dans les équipes de testing à la fois sur la partie métier mais également sur la partie intégration système et interface utilisateur."
         self.key = "l"
         self.falseKey = 'f'
@@ -12,5 +13,11 @@ class KeyFinderTest(unittest.TestCase):
     def testFqrcFinder(self):
         decuCrypted = self.crypted
         keyFnd = KeyFinder.frqcFinder(decuCrypted, len(self.key))
+        self.assertEqual(self.key, keyFnd)
+        self.assertNotEqual(self.falseKey, keyFnd)
+
+    def testBruteFrcFinder(self):
+        decuCrypted = self.crypted
+        keyFnd = self.KF.bruteFrcFinder(decuCrypted, len(self.key))
         self.assertEqual(self.key, keyFnd)
         self.assertNotEqual(self.falseKey, keyFnd)
