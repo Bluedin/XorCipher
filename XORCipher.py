@@ -48,6 +48,3 @@ class XORCipher:
 #     fileToWrite = XORCipher.printTxtToFile("C:\\Users\\pblue\\Downloads\\Groupe 1\\decrypted\\{}.txt".format(files[i]), decrypted)
     
    
-
-
-print('end')
