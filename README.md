@@ -24,7 +24,7 @@ L'algorithme est le suivant :
       Une table pour le premier caractère de la clé, une pour le second, ...
   - Pour chaque table, décrypter avec toutes les possibilités (26 caractères) et trouver celle qui a la fréquence la plus élevée de `e`.
 
-Avec ça, on peut trouver la clé.
+A l'aide de cette méthode nous avons pu trouver la clé `fabqtl`.
 
 Nombre d'essais : 26 + 26 + 26 + 26 + 26 + 26 + 26 = 156
 
@@ -54,4 +54,10 @@ Dans la méthode Brute-Force, nous testons chaque combinaison, ce qui nécessite
 ## Dictionnaire :
 
 Un dictionnaire est une base de données ou un fichier contenant une liste de mots d'une langue.
+
+
+## Diagramme de Classes :
+
+![image](https://user-images.githubusercontent.com/19566220/55892567-d0658380-5bb6-11e9-97a8-71a6f4e86d8a.png)
+
 
