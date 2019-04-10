@@ -55,3 +55,9 @@ Dans la méthode Brute-Force, nous testons chaque combinaison, ce qui nécessite
 
 Un dictionnaire est une base de données ou un fichier contenant une liste de mots d'une langue.
 
+
+## Diagramme de Classes :
+
+![image](https://user-images.githubusercontent.com/19566220/55892567-d0658380-5bb6-11e9-97a8-71a6f4e86d8a.png)
+
+
