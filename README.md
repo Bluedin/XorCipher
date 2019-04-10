@@ -2,7 +2,7 @@
 
 Nous avons 11 fichiers qui ont été cryptés. Au cours de notre enquête, nous avons découvert qu'ils étaient cryptés à l'aide d'un chiffrement XOR à l'aide d'une clé composée de 6 lettres en minuscules.
 
-Pour trouver cette clé, nous avons écrit un programme en Python.
+Pour trouver cette clé, nous avons écrit un programme en Python. Ce programme est interactif à l'aide d'une console.
 
 D'après nos recherches, il y a deux façons de trouver une clé utilisée pour crypter avec XOR :
 
@@ -69,3 +69,10 @@ Pour vérifier qu'un fichier a bien été décodé, nous séparons le contenu du
 ![image](https://user-images.githubusercontent.com/19566220/55892567-d0658380-5bb6-11e9-97a8-71a6f4e86d8a.png)
 
 
+
+## Utiliser le programme :
+Lancer le programme main.py avec Python
+En ligne de commande dans le dossier du projet :
+  
+  `python main.py`
+  
