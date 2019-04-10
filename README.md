@@ -14,7 +14,7 @@ D'après nos recherches, il y a deux façons de trouver une clé utilisée pour 
 ## Analyse de fréquence :
 
 L'analyse de fréquence fonctionne en testant toutes les possibilités pour chaque caractère de la clé et en comparant la fréquence de la lettre à ce qui est attendu en fonction de la langue cible.
-Par exemple, en français, la fréquence de la lettre `e` est la plus élevée. C'est pourquoi pour trouver la bonne lettre, nous recherchons la lettre qui donne la plus haute fréquence de'e' dans le message décrypté.
+Par exemple, en français, la fréquence de la lettre `e` est la plus élevée. C'est pourquoi pour trouver la bonne lettre, nous recherchons la lettre qui donne la plus haute fréquence de 'e' dans le message décrypté.
 
 L'algorithme est le suivant :
 
@@ -47,13 +47,21 @@ On essaie toutes les clés jusqu'à ce qu'on trouve la bonne. Par exemple : AAAA
 Nombre d'essais : 26 * 26 * 26 * 26 * 26 * 26 * 26 * 26 = 308 915 776
 
 
-Dans la méthode Brute-Force, nous testons chaque combinaison, ce qui nécessite de check le résultat à chaque fois. Etant donné que le nombre de combinaisons possibles est trop grand, il n'est pas possible de vérifier chacune d'entre elles à la main, c'est pourquoi nous devons check le résultat avec un dictionnaire.
+Dans la méthode Brute-Force, nous testons chaque combinaison, ce qui nécessite de vérifier le résultat à chaque fois. Etant donné que le nombre de combinaisons possibles est trop grand, il n'est pas possible de vérifier chacune d'entre elles à la main, c'est pourquoi nous devons vérifier le résultat avec un dictionnaire.
+
+
+Pour essayer toutes les combinaisons, nous utilisons une fonction récursive qui permet de tester toutes les combinaisons de lettre avec une liste. A chaque nouvelle combinaison, nous essayons de déchiffrer le fichier puis vérifions le contenu. Si il est trouvé la fonction renvoie la clé trouvé.
 
 
 
 ## Dictionnaire :
 
 Un dictionnaire est une base de données ou un fichier contenant une liste de mots d'une langue.
+Le dictionnaire utilisé est un fichier texte avec un mots par ligne.
+Nous avons extraits les données à l'intérieur et les avons stocké dans une liste pour ensuite vérifier les résultats des déchiffrements.
+
+
+Pour vérifier qu'un fichier a bien été décodé, nous séparons le contenu du fichier déchiffré en une liste de string à l'aide de la fonction split avec le séparateur espace ` `. Puis nous regardons si chaque string de la liste se trouve dans le dictionnaire. On calcule un rapport `nombre de mots trouvé/nombre de mots dans le fichier`, si il est supérieur à 0,7 on considère le fichier comme correctement déchiffré.
 
 
 ## Diagramme de Classes :
