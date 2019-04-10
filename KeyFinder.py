@@ -26,7 +26,7 @@ class KeyFinder:
                 decryptBloc = []
                 for j in msgBloc[i]:
                     decryptBloc.append(XORCipher.xorCiphering(j, letter))
-                letterDict[letter] = decryptBloc.count('e')+1/len(decryptBloc)
+                letterDict[letter] = decryptBloc.count('e')/len(decryptBloc)
                 if(keyDict[i] is None or keyDict[i]["value"] < letterDict[letter]):
                     keyDict[i] = {"letter": letter, "value": letterDict[letter]}
             key += keyDict[i].get("letter")
@@ -37,7 +37,7 @@ class KeyFinder:
 
     def hammingDistance(bloc1, bloc2):
         hammingDistance = 0
-        return hamminDistance
+        return hammingDistance
 
 
 #file1 = "PB"
