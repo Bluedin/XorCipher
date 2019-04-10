@@ -24,7 +24,7 @@ L'algorithme est le suivant :
       Une table pour le premier caractère de la clé, une pour le second, ...
   - Pour chaque table, décrypter avec toutes les possibilités (26 caractères) et trouver celle qui a la fréquence la plus élevée de `e`.
 
-Avec ça, on peut trouver la clé.
+A l'aide de cette méthode nous avons pu trouver la clé `fabqtl`.
 
 Nombre d'essais : 26 + 26 + 26 + 26 + 26 + 26 + 26 = 156
 
