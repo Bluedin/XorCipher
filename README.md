@@ -64,6 +64,12 @@ Nous avons extraits les données à l'intérieur et les avons stocké dans une l
 Pour vérifier qu'un fichier a bien été décodé, nous séparons le contenu du fichier déchiffré en une liste de string à l'aide de la fonction split avec le séparateur espace ` `. Puis nous regardons si chaque string de la liste se trouve dans le dictionnaire. On calcule un rapport `nombre de mots trouvé/nombre de mots dans le fichier`, si il est supérieur à 0,7 on considère le fichier comme correctement déchiffré.
 
 
+## Brute-Force distribuée :
+
+La même méthode que pour le Brute-Force, mais le déchiffrement et la vérification se font sur d'autre machine. 
+On peut utiliser le script ServiceDecryption pour créer des serveurs temporaires sur d'autres ordinateurs. On les appelles pour faire les opérations de déchiffrages et de vérifications dans les versions distribuées des fonctions Brute-Force. Les résultats sont stockés sur le serveur puis récuperé par le programme principale pour retrouver la clés.
+
+
 ## Diagramme de Classes :
 
 ![image](https://user-images.githubusercontent.com/19566220/55901080-e714d600-5bc8-11e9-85e8-772c1671b423.png)
