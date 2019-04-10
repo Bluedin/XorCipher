@@ -64,6 +64,12 @@ We extracted the data inside and stored it in a list to then check the results o
 To check that a file has been decoded, we separate the contents of the decrypted file into a string list using the split function with the space separator ` `. Then we check if each string in the list is in the dictionary. A ratio `number of words found/number of words in the file` is calculated, if it is greater than 0.7 the file is considered to be correctly decrypted.
 
 
+## Brute-Force distributed:
+
+The same method as for Brute-Force, but the decryption and verification are done on other machines. 
+You can use the ServiceDecryption script to create temporary servers on other computers. They are called to perform decryption and verification operations in distributed versions of the Brute-Force functions. The results are stored on the server and then retrieved by the main program to find the key.
+
+
 ## Class diagram :
 
 ![image](https://user-images.githubusercontent.com/19566220/55901080-e714d600-5bc8-11e9-85e8-772c1671b423.png)
