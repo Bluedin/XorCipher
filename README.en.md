@@ -66,7 +66,7 @@ To check that a file has been decoded, we separate the contents of the decrypted
 
 ## Class diagram :
 
-![image](https://user-images.githubusercontent.com/19566220/55892567-d0658380-5bb6-11e9-97a8-71a6f4e86d8a.png)
+![image](https://user-images.githubusercontent.com/19566220/55901080-e714d600-5bc8-11e9-85e8-772c1671b423.png)
 
 
 
